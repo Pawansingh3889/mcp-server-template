@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# Cookiecutter test output: any directories created by `cookiecutter .` runs
+# are local generated projects, not part of the template itself
+my-mcp-server/
+test-output/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
