@@ -1,0 +1,50 @@
+# {{ cookiecutter.project_name }} development commands
+# Install just: https://github.com/casey/just
+# Run `just` (no args) to see all available commands
+
+# Show available commands
+default:
+    @just --list
+
+# Install dev dependencies (uv recommended for speed)
+install:
+    uv pip install -e ".[dev]"
+
+# Install via plain pip (fallback if uv is not available)
+install-pip:
+    pip install -e ".[dev]"
+
+# Run the test suite
+test:
+    pytest tests/ -v
+
+# Run tests with coverage report
+cov:
+    pytest tests/ -v --cov={{ cookiecutter.package_name }} --cov-report=term
+
+# Lint check (no auto-fix)
+lint:
+    ruff check src tests
+
+# Auto-fix lint issues
+lint-fix:
+    ruff check --fix src tests
+
+# Format code with ruff
+fmt:
+    ruff format src tests
+
+# Run lint + tests in sequence (run before committing)
+check: lint test
+
+# Build sdist + wheel
+build:
+    python -m build
+
+# Run the MCP server (stdin/stdout, for MCP clients)
+run:
+    {{ cookiecutter.project_slug }}
+
+# Debug the server interactively with the MCP Inspector
+inspect:
+    npx @modelcontextprotocol/inspector {{ cookiecutter.project_slug }}
