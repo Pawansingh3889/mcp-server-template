@@ -97,10 +97,7 @@ Restart Claude Desktop. Tools appear under Settings → Tools.
 
 ## Examples in the wild
 
-Real MCP servers built using this template's pattern:
-
-- [sql-sop-mcp](https://github.com/Pawansingh3889/sql-sop-mcp) -- SQL linter exposed as MCP
-- [sql-explorer-mcp](https://github.com/Pawansingh3889/sql-explorer-mcp) -- multi-engine read-only SQL explorer with three-layer safety
+See [BUILT_WITH.md](BUILT_WITH.md) for servers built with this template. Currently lists [sql-sop-mcp](https://github.com/Pawansingh3889/sql-sop-mcp) and [sql-explorer-mcp](https://github.com/Pawansingh3889/sql-explorer-mcp). PRs adding yours are welcome.
 
 ## Contributing
 
