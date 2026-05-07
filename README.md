@@ -15,6 +15,7 @@ Scaffolds a Python MCP server in 30 seconds with the same shape used by [sql-sop
 | `tests/test_server.py` | pytest suite that calls your tools directly, plus instructions for MCP Inspector |
 | `.github/workflows/ci.yml` | Python 3.10/3.11/3.12/3.13 matrix with ruff lint + pytest |
 | `.github/workflows/release.yml` | Tag-driven PyPI publish via Trusted Publishing (OIDC, no API tokens) |
+| `.pre-commit-config.yaml` | Ruff lint + format, trailing whitespace, EOF, YAML, merge-conflict, large-file checks. Includes `pre-commit.ci` block (weekly autoupdate, autofix on PRs) so hosted runs work as soon as the repo is created. |
 | `README.md` | Per-platform setup snippets for Claude Desktop, Cursor, MCP Inspector |
 | `LICENSE` | MIT, Apache-2.0, or BSD-3-Clause -- you pick |
 | `.env.example` | Template for local config (gitignored once copied to .env) |
